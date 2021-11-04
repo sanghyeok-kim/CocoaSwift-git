@@ -31,21 +31,21 @@ struct LadderGame {
     
     
     static func printLadder(number: Int, height: Int) {
-        let rows = number - 1
-        let cols = height
+        let cols = number - 1
+        let rows = height
 
         var ladders = [[Int]]()
-        ladders = Array(repeating: Array(repeating: 0, count: rows), count: cols)
+        ladders = Array(repeating: Array(repeating: 0, count: cols), count: rows)
         
         
-        for i in 0..<cols {
-            for j in 0..<rows {
+        for i in 0..<rows {
+            for j in 0..<cols {
                 ladders[i][j] = Int.random(in: 0...1)
             }
         }
 
-        for i in 0..<cols {
-            for j in 0..<rows {
+        for i in 0..<rows {
+            for j in 0..<cols {
                 if j == 0 {
                     print("|", terminator: "")
                 }
