@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Measure
+//  Week2-MesureConvertApp
 //
 //  Created by 김상혁 on 2021/11/09.
 //

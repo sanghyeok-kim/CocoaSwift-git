@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Measure
+//  Week2-MesureConvertApp
 //
 //  Created by 김상혁 on 2021/11/09.
 //
@@ -39,7 +39,5 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
 }
 
