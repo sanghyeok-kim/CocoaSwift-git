@@ -7,5 +7,10 @@
 
 import Foundation
 
-let myInterestRate = InterestRate()
-myInterestRate.testInterest(unitDay: 30)
+//let myInterestRate = InterestRate()
+//myInterestRate.testInterest(unitDay: 30)
+
+var asd = NumberBaseball()
+
+asd.newGame()
+asd.hit(num: 124)
