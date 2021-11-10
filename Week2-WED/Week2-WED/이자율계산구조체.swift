@@ -7,6 +7,7 @@
 
 struct InterestRate {
     
+
     
     func getInterestRate(byDay: Int) -> Double {
         
@@ -36,9 +37,8 @@ struct InterestRate {
         
         for i in 1...365 {
             if i % unitDay == 0 {
-                let result = Int(calculateAmount(day: i, amount: 1_000_000))
-                
-                print("\(i)일차에 받을 수 있는 원리금 : \(result)원")
+                let result = calculateAmount(day: i, amount: 1_000_000)
+                print("\(i)일차에 받을 수 있는 원리금 : \(Int(result))원")
             }
         }
         return 0
