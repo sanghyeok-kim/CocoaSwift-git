@@ -3,33 +3,40 @@ import Foundation
 
 struct NumberBaseball {
     
-    private var secretNumber: Int
+    private var secretFirstNumber: Int = 0
+    private var secretSecondNumber: Int = 0
+    private var secretThirdNumber: Int = 0
+
     
-    
-    init() {
-        secretNumber = 0
+    mutating func makeSecretNumber() {
+        var secretNumbers = [Int]()
+
+        for _ in 0..<3 {
+            var newRandomNumber = Int.random(in: 0...9)
+            
+            while secretNumbers.contains(newRandomNumber) {
+                newRandomNumber = Int.random(in: 0...9)
+            }
+            secretNumbers.append(newRandomNumber)
+        }
+        
+        secretFirstNumber = secretNumbers[0]
+        secretSecondNumber = secretNumbers[1]
+        secretThirdNumber = secretNumbers[2]
     }
-    
-    
-    mutating func newGame() {
-        secretNumber = Int.random(in: 100...999)
-    }
+
     
     func hit(num: Int) -> (strikeCount: Int, ballCount: Int) {
         
         var countOfStrike = 0
         var countOfBall = 0
-        
-        let secretFirstNumber = secretNumber % 10
-        let secretSecondNumber = secretNumber % 100 / 10
-        let secretThirdNumber = secretNumber / 100
-        
-        let userFirstNumber = num % 10
+
+        let userFirstNumber = num / 100
         let userSecondNumber = num % 100 / 10
-        let userThirdNumber = num / 100
+        let userThirdNumber = num % 10
         
-        let userNumberArr: [Int] = [userThirdNumber, userSecondNumber, userFirstNumber]
-        let secretNumberArr: [Int] = [secretThirdNumber, secretSecondNumber, secretFirstNumber]
+        let userNumberArr: [Int] = [userFirstNumber, userSecondNumber, userThirdNumber]
+        let secretNumberArr: [Int] = [secretFirstNumber, secretSecondNumber, secretThirdNumber]
  
         let arrCount = userNumberArr.count
         
@@ -40,6 +47,13 @@ struct NumberBaseball {
                 countOfStrike += 1
             }
         }
+        
+        if countOfStrike == 3 {
+            let result = (countOfStrike, countOfBall)
+            return result
+        }
+        
+        
         
         //Ball 판별
         for i in 0..<arrCount {
@@ -56,8 +70,27 @@ struct NumberBaseball {
         let result = (countOfStrike, countOfBall)
         return result
     }
-}
+    
+    
+    func showGameScore() -> Bool {
+        var count = 9
+        print("3자리 숫자 ???를 맞추세요. 기회는 \(count)번 주어집니다.")
 
-//var asd = NumberBaseball()
-//asd.newGame()
-//asd.hit(num: 124)
+        while count != 0 {
+            let userNumber = Int(readLine() ?? "") ?? 0
+            let gameResult = self.hit(num: userNumber)
+            
+            if gameResult == (3, 0) {
+                print("맞췄습니다!")
+                return true
+
+            } else {
+                count -= 1
+                print("\(gameResult) - 남은 횟수 : \(count)")
+            }
+        }
+        print("---game over---")
+        print("정답 : \(secretFirstNumber)\(secretSecondNumber)\(secretThirdNumber)")
+        return false
+    }
+}
