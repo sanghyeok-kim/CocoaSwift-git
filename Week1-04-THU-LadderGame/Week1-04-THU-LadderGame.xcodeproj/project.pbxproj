@@ -23,7 +23,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1E1304852733C6F7006D0C0C /* Week1-LadderGame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Week1-LadderGame"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E1304852733C6F7006D0C0C /* Week1-04-THU-LadderGame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Week1-04-THU-LadderGame"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E1304882733C6F7006D0C0C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,7 +41,7 @@
 		1E13047C2733C6F7006D0C0C = {
 			isa = PBXGroup;
 			children = (
-				1E1304872733C6F7006D0C0C /* Week1-LadderGame */,
+				1E1304872733C6F7006D0C0C /* Week1-04-THU-LadderGame */,
 				1E1304862733C6F7006D0C0C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,25 +49,25 @@
 		1E1304862733C6F7006D0C0C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1E1304852733C6F7006D0C0C /* Week1-LadderGame */,
+				1E1304852733C6F7006D0C0C /* Week1-04-THU-LadderGame */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1E1304872733C6F7006D0C0C /* Week1-LadderGame */ = {
+		1E1304872733C6F7006D0C0C /* Week1-04-THU-LadderGame */ = {
 			isa = PBXGroup;
 			children = (
 				1E1304882733C6F7006D0C0C /* main.swift */,
 			);
-			path = "Week1-LadderGame";
+			path = "Week1-04-THU-LadderGame";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1E1304842733C6F7006D0C0C /* Week1-LadderGame */ = {
+		1E1304842733C6F7006D0C0C /* Week1-04-THU-LadderGame */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1E13048C2733C6F7006D0C0C /* Build configuration list for PBXNativeTarget "Week1-LadderGame" */;
+			buildConfigurationList = 1E13048C2733C6F7006D0C0C /* Build configuration list for PBXNativeTarget "Week1-04-THU-LadderGame" */;
 			buildPhases = (
 				1E1304812733C6F7006D0C0C /* Sources */,
 				1E1304822733C6F7006D0C0C /* Frameworks */,
@@ -77,9 +77,9 @@
 			);
 			dependencies = (
 			);
-			name = "Week1-LadderGame";
+			name = "Week1-04-THU-LadderGame";
 			productName = "Week1-LadderGame";
-			productReference = 1E1304852733C6F7006D0C0C /* Week1-LadderGame */;
+			productReference = 1E1304852733C6F7006D0C0C /* Week1-04-THU-LadderGame */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -96,7 +96,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1E1304802733C6F7006D0C0C /* Build configuration list for PBXProject "Week1-LadderGame" */;
+			buildConfigurationList = 1E1304802733C6F7006D0C0C /* Build configuration list for PBXProject "Week1-04-THU-LadderGame" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -109,7 +109,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1E1304842733C6F7006D0C0C /* Week1-LadderGame */,
+				1E1304842733C6F7006D0C0C /* Week1-04-THU-LadderGame */,
 			);
 		};
 /* End PBXProject section */
@@ -245,6 +245,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Week1-04-THU-LadderGame/Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -254,6 +255,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Week1-04-THU-LadderGame/Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -262,7 +264,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1E1304802733C6F7006D0C0C /* Build configuration list for PBXProject "Week1-LadderGame" */ = {
+		1E1304802733C6F7006D0C0C /* Build configuration list for PBXProject "Week1-04-THU-LadderGame" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1E13048A2733C6F7006D0C0C /* Debug */,
@@ -271,7 +273,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1E13048C2733C6F7006D0C0C /* Build configuration list for PBXNativeTarget "Week1-LadderGame" */ = {
+		1E13048C2733C6F7006D0C0C /* Build configuration list for PBXNativeTarget "Week1-04-THU-LadderGame" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1E13048D2733C6F7006D0C0C /* Debug */,
