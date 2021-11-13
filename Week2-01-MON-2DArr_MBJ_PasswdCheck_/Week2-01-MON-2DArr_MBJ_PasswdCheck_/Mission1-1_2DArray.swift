@@ -1,4 +1,9 @@
-//연습문제1-미션1. 2차원 배열 만들기 & 출력하기
+//
+//  Mission1-2DArray.swift
+//  Week2-01-MON-2DArr_MBJ_PasswdCheck_
+//
+//  Created by 김상혁 on 2021/11/13.
+//
 
 import Foundation
 

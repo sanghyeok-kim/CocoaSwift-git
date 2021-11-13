@@ -1,4 +1,9 @@
-//연습문제4. 주민번호 판별검사
+//
+//  Mission4_ResidentialID.swift
+//  Week2-01-MON-2DArr_MBJ_PasswdCheck_
+//
+//  Created by 김상혁 on 2021/11/13.
+//
 
 import Foundation
 
@@ -60,4 +65,3 @@ func nationIDValidator (input: String) -> Bool {
 }
 
 nationIDValidator(input: "123456-1234567")
-

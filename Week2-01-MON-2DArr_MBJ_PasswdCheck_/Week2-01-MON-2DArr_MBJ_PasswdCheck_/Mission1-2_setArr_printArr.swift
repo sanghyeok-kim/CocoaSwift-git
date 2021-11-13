@@ -1,4 +1,9 @@
-//연습문제1-미션2. setBoolArray와 printArray
+//
+//  Mission1-2_setArr_printArr.swift
+//  Week2-01-MON-2DArr_MBJ_PasswdCheck_
+//
+//  Created by 김상혁 on 2021/11/13.
+//
 
 import Foundation
 
