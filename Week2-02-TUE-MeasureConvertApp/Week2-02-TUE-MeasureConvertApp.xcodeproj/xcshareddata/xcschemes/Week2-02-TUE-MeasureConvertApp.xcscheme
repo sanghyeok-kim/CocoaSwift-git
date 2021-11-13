@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1E3C7945273A8FEC00C6FFF2"
-               BuildableName = "Week2-02-TUE-Cafelatte.app"
-               BlueprintName = "Week2-Cafelatte"
-               ReferencedContainer = "container:Week2-Cafelatte.xcodeproj">
+               BlueprintIdentifier = "1E3C7925273A8D9800C6FFF2"
+               BuildableName = "Week2-02-TUE-MeasureConvertApp.app"
+               BlueprintName = "Week2-02-TUE-MeasureConvertApp"
+               ReferencedContainer = "container:Week2-02-TUE-MeasureConvertApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -44,10 +44,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1E3C7945273A8FEC00C6FFF2"
-            BuildableName = "Week2-02-TUE-Cafelatte.app"
-            BlueprintName = "Week2-Cafelatte"
-            ReferencedContainer = "container:Week2-Cafelatte.xcodeproj">
+            BlueprintIdentifier = "1E3C7925273A8D9800C6FFF2"
+            BuildableName = "Week2-02-TUE-MeasureConvertApp.app"
+            BlueprintName = "Week2-02-TUE-MeasureConvertApp"
+            ReferencedContainer = "container:Week2-02-TUE-MeasureConvertApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -61,10 +61,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1E3C7945273A8FEC00C6FFF2"
-            BuildableName = "Week2-02-TUE-Cafelatte.app"
-            BlueprintName = "Week2-Cafelatte"
-            ReferencedContainer = "container:Week2-Cafelatte.xcodeproj">
+            BlueprintIdentifier = "1E3C7925273A8D9800C6FFF2"
+            BuildableName = "Week2-02-TUE-MeasureConvertApp.app"
+            BlueprintName = "Week2-02-TUE-MeasureConvertApp"
+            ReferencedContainer = "container:Week2-02-TUE-MeasureConvertApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
