@@ -22,8 +22,9 @@ class ViewController: UIViewController {
     
     
     @IBAction func button(_ sender: Any) {
-        
+
         guard let input = inputText.text, input.count > 0 else {
+            
             return
         }
         
@@ -47,7 +48,6 @@ class ViewController: UIViewController {
                 nextWord.text = words[count + 1]
             }
             inputText.text = ""
-            
         }
         
         else {
@@ -59,8 +59,7 @@ class ViewController: UIViewController {
         }
         
     }
-    
-    
+ 
     
 
     override func viewDidLoad() {
@@ -85,4 +84,3 @@ class ViewController: UIViewController {
         view.endEditing(true)
     }
 }
-

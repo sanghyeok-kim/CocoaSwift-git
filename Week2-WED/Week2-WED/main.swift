@@ -7,9 +7,12 @@
 
 import Foundation
 
-let myInterestRate = InterestRate()
-myInterestRate.testInterest(unitDay: 15)
+//let myInterestRate = InterestRate()
+//myInterestRate.testInterest(unitDay: 100)
 
-//var myNumberBaseball = NumberBaseball()
-//myNumberBaseball.makeSecretNumber()
-//myNumberBaseball.showGameScore()
+var myNumberBaseball = NumberBaseball()
+
+myNumberBaseball.makeSecretNumber()
+myNumberBaseball.showGameScore()
+
+

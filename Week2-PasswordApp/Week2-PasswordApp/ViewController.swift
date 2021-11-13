@@ -94,6 +94,8 @@ class ViewController: UIViewController {
             return
         }
         
+        
+        
         let passwordLevel = passwordValidator(password: input)
         
         changeLabelBarColor(level: passwordLevel)
