@@ -5,8 +5,6 @@
 //  Created by 김상혁 on 2021/11/13.
 //
 
-import Foundation
-
 func step1(step1Input: String) -> [Int] {
     let inputStr = step1Input.split(separator: "-")
     let inputNumArr = Array(inputStr[0] + inputStr[1])
@@ -64,4 +62,4 @@ func nationIDValidator (input: String) -> Bool {
     return step4result
 }
 
-nationIDValidator(input: "123456-1234567")
+//nationIDValidator(input: "123456-1234567")

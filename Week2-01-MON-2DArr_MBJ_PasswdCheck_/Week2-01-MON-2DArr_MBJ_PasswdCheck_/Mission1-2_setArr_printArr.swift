@@ -5,9 +5,7 @@
 //  Created by 김상혁 on 2021/11/13.
 //
 
-import Foundation
-
-struct ArrayPractice {
+struct ArrayPractice2 {
     
     func setBoolArray() -> Array<Array<Bool>> {
         let rows = 7
@@ -43,5 +41,5 @@ struct ArrayPractice {
     
 }
 
-var myArray = ArrayPractice()
-myArray.printArray(array: myArray.setBoolArray(), newChar: "$")
+//var myArray = ArrayPractice2()
+//myArray.printArray(array: myArray.setBoolArray(), newChar: "$")

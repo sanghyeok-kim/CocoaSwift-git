@@ -5,8 +5,6 @@
 //  Created by 김상혁 on 2021/11/13.
 //
 
-import Foundation
-
 struct ArrayPractice {
     
     func fillArray() -> Array<Array<Int>> {
@@ -37,5 +35,5 @@ struct ArrayPractice {
     
 }
 
-var myArray = ArrayPractice()
-myArray.printArray(array: myArray.fillArray())
+//var myArray = ArrayPractice()
+//myArray.printArray(array: myArray.fillArray())

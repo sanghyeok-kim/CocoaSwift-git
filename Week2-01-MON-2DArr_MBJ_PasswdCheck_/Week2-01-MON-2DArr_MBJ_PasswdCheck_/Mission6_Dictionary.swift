@@ -5,8 +5,6 @@
 //  Created by 김상혁 on 2021/11/13.
 //
 
-import Foundation
-
 func duplicatedWordsByArray(inputWords: Array<String>) -> Array<String> {
 
     let arrCount = inputWords.count

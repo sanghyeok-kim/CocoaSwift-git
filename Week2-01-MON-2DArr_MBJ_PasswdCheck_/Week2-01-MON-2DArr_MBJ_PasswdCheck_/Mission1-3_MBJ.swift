@@ -5,8 +5,6 @@
 //  Created by 김상혁 on 2021/11/13.
 //
 
-import Foundation
-
 func printMagicSquare(inputArr: Array<Array<Int>>) {
     let row = inputArr.count
 
@@ -77,6 +75,6 @@ func makeMagicSquare(row: Int) -> Array<Array<Int>> {
 }
 
 
-let myMagicSquare = makeMagicSquare(row: 3)
+//let myMagicSquare = makeMagicSquare(row: 3)
 //let myMagicSquare = makeMagicSquare(row: 5)
-printMagicSquare(inputArr: myMagicSquare)
+//printMagicSquare(inputArr: myMagicSquare)
