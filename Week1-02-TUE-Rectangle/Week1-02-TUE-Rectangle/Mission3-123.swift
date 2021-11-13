@@ -1,6 +1,6 @@
 //
 //  Mission3-123.swift
-//  Week1-02-THU-Rectangle
+//  Week1-02-TUE-Rectangle
 //
 //  Created by 김상혁 on 2021/11/13.
 //
@@ -110,10 +110,9 @@ rectB.printRect()
 /*[미션3 출력]*/
 
 //rectB.moveTo(delta: (-3.0, 1.5))
-//(의문점)MyPoint 타입을 입력받는 moveTo()에 설명대로 (-3.0, 1.5)를 argument로 입력하는 것은 에러가 난다
+//(의문점)MyPoint 타입을 입력받는 moveTo()에 설명대로 (-3.0, 1.5)를 argument로 입력하는 것은 에러 발생
 //-> (-3.0, 1.5) 좌표를 갖는 MyPoint 타입의 인스턴스를 생성해서, 그 인스턴스를 argument로 넣었다
 var deltaPoint: MyPoint = MyPoint(myX: -3.0, myY: 1.5)
 rectB.moveTo(delta: deltaPoint)
 rectB.printRect()
 //출력결과:(2.0, 16.5), (7.0, 16.5), (2.0, 6.5), (7.0, 6.5)
-

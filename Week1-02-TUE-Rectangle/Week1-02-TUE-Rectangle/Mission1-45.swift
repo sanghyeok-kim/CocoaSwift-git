@@ -1,12 +1,13 @@
 //
-//  Mission01-4.swift
-//  Week1-02-THU-Rectangle
+//  Mission1-45.swift
+//  Week1-02-TUE-Rectangle
 //
 //  Created by 김상혁 on 2021/11/13.
 //
 
 import Foundation
 
+/*[미션 4]*/
 struct Rectangle {
     var leftTopX: Float
     var leftTopY: Float
