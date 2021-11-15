@@ -13,21 +13,30 @@ class ViewController: UIViewController {
     let progressUnit: Float = 1.0 / 20.0
     var queuingCount = 0
     
+    func pressed(by btn: Bool) {
+        if btn {
+            queuingCount += 1
+            progressBar.progress += progressUnit
+        } else {
+            queuingCount -= 1
+            progressBar.progress -= progressUnit
+        }
+        
+        countPersonLabel.text = String(format: "%02d 명", queuingCount)
+    }
+    
     @IBOutlet weak var countPersonLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var queueButtonOutlet: UIButton!
     
     @IBAction func queueButton(_ sender: Any) {
-        queuingCount += 1
-        countPersonLabel.text = String(format: "%02d 명", queuingCount)
-        progressBar.progress += progressUnit
+        pressed(by: true)
         
         if queuingCount == MAX {
             countPersonLabel.textColor = .red
             queueButtonOutlet.isEnabled = false
             return
         } else {
-            
             doneButtonOutlet.isEnabled = true
         }
     }
@@ -35,16 +44,13 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var doneButtonOutlet: UIButton!
     @IBAction func doneButton(_ sender: Any) {
-        queuingCount -= 1
-        countPersonLabel.text = String(format: "%02d 명", queuingCount)
-        progressBar.progress -= progressUnit
+        pressed(by: false)
         
         if queuingCount == MIN {
             doneButtonOutlet.isEnabled = false
             progressBar.progress = 0
             return
         } else {
-            
             countPersonLabel.textColor = .black
             queueButtonOutlet.isEnabled = true
         }
