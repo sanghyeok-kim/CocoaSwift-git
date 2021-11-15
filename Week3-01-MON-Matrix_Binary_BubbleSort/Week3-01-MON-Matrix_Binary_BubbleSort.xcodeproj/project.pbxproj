@@ -10,6 +10,7 @@
 		1E1A57A92741F3AA0028B7A6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1A57A82741F3AA0028B7A6 /* main.swift */; };
 		1E1A57B02741F4080028B7A6 /* Mission1_Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1A57AF2741F4080028B7A6 /* Mission1_Matrix.swift */; };
 		1E1A57B22741F4610028B7A6 /* Mission2_Binary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1A57B12741F4610028B7A6 /* Mission2_Binary.swift */; };
+		1E8BA377274224BC008DD606 /* Mission3_BubbleSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8BA376274224BC008DD606 /* Mission3_BubbleSort.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +30,7 @@
 		1E1A57A82741F3AA0028B7A6 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		1E1A57AF2741F4080028B7A6 /* Mission1_Matrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission1_Matrix.swift; sourceTree = "<group>"; };
 		1E1A57B12741F4610028B7A6 /* Mission2_Binary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission2_Binary.swift; sourceTree = "<group>"; };
+		1E8BA376274224BC008DD606 /* Mission3_BubbleSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission3_BubbleSort.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				1E1A57A82741F3AA0028B7A6 /* main.swift */,
 				1E1A57AF2741F4080028B7A6 /* Mission1_Matrix.swift */,
 				1E1A57B12741F4610028B7A6 /* Mission2_Binary.swift */,
+				1E8BA376274224BC008DD606 /* Mission3_BubbleSort.swift */,
 			);
 			path = "Week3-01-MON-Matrix_Binary_BubbleSort";
 			sourceTree = "<group>";
@@ -126,6 +129,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E8BA377274224BC008DD606 /* Mission3_BubbleSort.swift in Sources */,
 				1E1A57A92741F3AA0028B7A6 /* main.swift in Sources */,
 				1E1A57B22741F4610028B7A6 /* Mission2_Binary.swift in Sources */,
 				1E1A57B02741F4080028B7A6 /* Mission1_Matrix.swift in Sources */,
