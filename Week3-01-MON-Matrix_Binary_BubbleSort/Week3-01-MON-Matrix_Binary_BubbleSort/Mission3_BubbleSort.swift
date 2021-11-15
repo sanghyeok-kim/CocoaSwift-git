@@ -17,39 +17,30 @@ class BubbleSort {
         }
     }
     
-    init(numbers: Int...) {
-        for number in numbers {
-            originArr.append(number)
-        }
+    init(numbers: [Int]) {
+        originArr = numbers
     }
-    
     
     
     func sorted(inAscending: Bool) -> Array<Int> {
         
-        func swap(aIndex: Int, bIndex: Int, sortingWay: Bool) {
-            
-            if sortingWay ? resultArr[aIndex] > resultArr[bIndex] : resultArr[aIndex] < resultArr[bIndex] {
+        func swap(aIndex: Int, bIndex: Int) {
+            if resultArr[aIndex] > resultArr[bIndex] {
                 let temp = resultArr[aIndex]
                 resultArr[aIndex] = resultArr[bIndex]
                 resultArr[bIndex] = temp
             }
-            
         }
-        
         
         var resultArr = originArr
         
+        
         for i in 0..<originArrCount - 1 {
             for j in 0..<originArrCount - 1 - i {
-                swap(aIndex: j, bIndex: j + 1, sortingWay: inAscending)
+                inAscending ? swap(aIndex: j, bIndex: j + 1) : swap(aIndex: j + 1, bIndex: j)
             }
         }
         
         return resultArr
     }
 }
-
-//let myArr = BubbleSort(numbers: 4, 5, 2, 1, 3)
-//myArr.sorted(inAscending: true)
-//myArr.sorted(inAscending: false)
