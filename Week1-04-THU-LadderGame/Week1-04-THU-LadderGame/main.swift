@@ -37,7 +37,6 @@ struct LadderGame {
         var ladders = [[Int]]()
         ladders = Array(repeating: Array(repeating: 0, count: cols), count: rows)
         
-        
         for i in 0..<rows {
             for j in 0..<cols {
                 ladders[i][j] = Int.random(in: 0...1)
