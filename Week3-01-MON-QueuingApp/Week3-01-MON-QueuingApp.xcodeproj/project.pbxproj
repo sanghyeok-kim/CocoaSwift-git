@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1E8BA381274236B9008DD606 /* Mission4_QueuingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mission4_QueuingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E8BA381274236B9008DD606 /* Week3-01-MON-QueuingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Week3-01-MON-QueuingApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E8BA384274236B9008DD606 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E8BA386274236B9008DD606 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1E8BA388274236B9008DD606 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 		1E8BA378274236B9008DD606 = {
 			isa = PBXGroup;
 			children = (
-				1E8BA383274236B9008DD606 /* Mission4_QueuingApp */,
+				1E8BA383274236B9008DD606 /* Week3-01-MON-QueuingApp */,
 				1E8BA382274236B9008DD606 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,12 +48,12 @@
 		1E8BA382274236B9008DD606 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1E8BA381274236B9008DD606 /* Mission4_QueuingApp.app */,
+				1E8BA381274236B9008DD606 /* Week3-01-MON-QueuingApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1E8BA383274236B9008DD606 /* Mission4_QueuingApp */ = {
+		1E8BA383274236B9008DD606 /* Week3-01-MON-QueuingApp */ = {
 			isa = PBXGroup;
 			children = (
 				1E8BA384274236B9008DD606 /* AppDelegate.swift */,
@@ -64,15 +64,15 @@
 				1E8BA38F274236BC008DD606 /* LaunchScreen.storyboard */,
 				1E8BA392274236BC008DD606 /* Info.plist */,
 			);
-			path = Mission4_QueuingApp;
+			path = "Week3-01-MON-QueuingApp";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1E8BA380274236B9008DD606 /* Mission4_QueuingApp */ = {
+		1E8BA380274236B9008DD606 /* Week3-01-MON-QueuingApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1E8BA395274236BC008DD606 /* Build configuration list for PBXNativeTarget "Mission4_QueuingApp" */;
+			buildConfigurationList = 1E8BA395274236BC008DD606 /* Build configuration list for PBXNativeTarget "Week3-01-MON-QueuingApp" */;
 			buildPhases = (
 				1E8BA37D274236B9008DD606 /* Sources */,
 				1E8BA37E274236B9008DD606 /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = Mission4_QueuingApp;
+			name = "Week3-01-MON-QueuingApp";
 			productName = Mission4_QueuingApp;
-			productReference = 1E8BA381274236B9008DD606 /* Mission4_QueuingApp.app */;
+			productReference = 1E8BA381274236B9008DD606 /* Week3-01-MON-QueuingApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +102,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1E8BA37C274236B9008DD606 /* Build configuration list for PBXProject "Mission4_QueuingApp" */;
+			buildConfigurationList = 1E8BA37C274236B9008DD606 /* Build configuration list for PBXProject "Week3-01-MON-QueuingApp" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +115,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1E8BA380274236B9008DD606 /* Mission4_QueuingApp */,
+				1E8BA380274236B9008DD606 /* Week3-01-MON-QueuingApp */,
 			);
 		};
 /* End PBXProject section */
@@ -290,7 +290,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Mission4_QueuingApp/Info.plist;
+				INFOPLIST_FILE = "Week3-01-MON-QueuingApp/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -301,7 +301,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "SangHyeokKim.Mission4-QueuingApp";
+				PRODUCT_BUNDLE_IDENTIFIER = "SangHyeokKim.Week3-01-MON-QueuingApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -317,7 +317,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Mission4_QueuingApp/Info.plist;
+				INFOPLIST_FILE = "Week3-01-MON-QueuingApp/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -328,7 +328,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "SangHyeokKim.Mission4-QueuingApp";
+				PRODUCT_BUNDLE_IDENTIFIER = "SangHyeokKim.Week3-01-MON-QueuingApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -339,7 +339,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1E8BA37C274236B9008DD606 /* Build configuration list for PBXProject "Mission4_QueuingApp" */ = {
+		1E8BA37C274236B9008DD606 /* Build configuration list for PBXProject "Week3-01-MON-QueuingApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1E8BA393274236BC008DD606 /* Debug */,
@@ -348,7 +348,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1E8BA395274236BC008DD606 /* Build configuration list for PBXNativeTarget "Mission4_QueuingApp" */ = {
+		1E8BA395274236BC008DD606 /* Build configuration list for PBXNativeTarget "Week3-01-MON-QueuingApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1E8BA396274236BC008DD606 /* Debug */,
