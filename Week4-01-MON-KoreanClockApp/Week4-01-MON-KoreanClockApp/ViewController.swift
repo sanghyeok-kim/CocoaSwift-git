@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var sky: UILabel!
     @IBOutlet weak var secondLabel: UILabel!
     
-    let seconds = ["정각", "일", "이", "삼", "사", "오", "육", "칠", "팔", "구",]
+    let seconds = ["정각", "일", "이", "삼", "사", "오", "육", "칠", "팔", "구"]
     let secondUnits = ["십", "이십", "삼십", "사십", "오십"]
     
     func setAllLabelGray() {
