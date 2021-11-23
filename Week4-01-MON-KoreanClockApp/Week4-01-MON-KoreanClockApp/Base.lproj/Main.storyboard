@@ -20,7 +20,7 @@
                                 <rect key="frame" x="20" y="44" width="87" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="열" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8p-D3-j0Z">
@@ -174,7 +174,7 @@
                                 <rect key="frame" x="210" y="414" width="87" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="사" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUJ-19-OKx">
@@ -202,7 +202,7 @@
                                 <rect key="frame" x="210" y="780" width="87" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="영" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5he-je-LsS">
@@ -265,7 +265,7 @@
                                 <rect key="frame" x="305" y="781" width="87" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -308,21 +308,6 @@
                         <outletCollection property="labels" destination="V9e-CA-Stk" collectionClass="NSMutableArray" id="Cad-rY-sLo"/>
                         <outletCollection property="labels" destination="zUf-Yl-puN" collectionClass="NSMutableArray" id="cMj-jM-YR5"/>
                         <outletCollection property="labels" destination="lnq-vv-nec" collectionClass="NSMutableArray" id="dh1-3T-nfl"/>
-                        <outletCollection property="hours" destination="5he-je-LsS" collectionClass="NSMutableArray" id="kad-Hi-wWm"/>
-                        <outletCollection property="hours" destination="Ja3-QV-bju" collectionClass="NSMutableArray" id="2Cl-f3-xrO"/>
-                        <outletCollection property="hours" destination="BFl-r3-Moc" collectionClass="NSMutableArray" id="LIL-9U-J2n"/>
-                        <outletCollection property="hours" destination="Uji-AD-9CB" collectionClass="NSMutableArray" id="U1V-9p-LnE"/>
-                        <outletCollection property="hours" destination="F92-vc-UaM" collectionClass="NSMutableArray" id="Jt1-AK-VQ1"/>
-                        <outletCollection property="hours" destination="AVG-QO-1bD" collectionClass="NSMutableArray" id="m9s-bH-rAK"/>
-                        <outletCollection property="hours" destination="yGe-IS-Jwy" collectionClass="NSMutableArray" id="RVg-Nd-8uk"/>
-                        <outletCollection property="hours" destination="bmQ-0t-QY9" collectionClass="NSMutableArray" id="aPb-el-sUY"/>
-                        <outletCollection property="hours" destination="ZUK-PZ-cjP" collectionClass="NSMutableArray" id="LQc-Mh-0mR"/>
-                        <outletCollection property="hours" destination="nCK-F3-XWV" collectionClass="NSMutableArray" id="Lwg-tP-bET"/>
-                        <outletCollection property="hours" destination="dtf-fS-Mkq" collectionClass="NSMutableArray" id="bBf-e3-I1O"/>
-                        <outletCollection property="hours" destination="j7b-gB-fhH" collectionClass="NSMutableArray" id="Aki-Eb-V7C"/>
-                        <outletCollection property="hours" destination="z8o-aw-B69" collectionClass="NSMutableArray" id="DTl-Ga-hHm"/>
-                        <outletCollection property="hours" destination="vx4-fa-jud" collectionClass="NSMutableArray" id="s6H-Iy-G0r"/>
-                        <outletCollection property="hours" destination="W8p-D3-j0Z" collectionClass="NSMutableArray" id="hGT-HE-sCi"/>
                         <outletCollection property="minutes" destination="yA0-fE-9Cs" collectionClass="NSMutableArray" id="hf5-kw-LO6"/>
                         <outletCollection property="minutes" destination="ceo-qX-lkT" collectionClass="NSMutableArray" id="cwe-68-VGf"/>
                         <outletCollection property="minutes" destination="EWj-ap-MfB" collectionClass="NSMutableArray" id="0CD-DA-AO7"/>
@@ -332,11 +317,30 @@
                         <outletCollection property="minutes" destination="VSQ-au-7wW" collectionClass="NSMutableArray" id="Bzc-Gm-LeB"/>
                         <outletCollection property="minutes" destination="lnq-vv-nec" collectionClass="NSMutableArray" id="V1x-Gc-k9y"/>
                         <outletCollection property="minutes" destination="zUf-Yl-puN" collectionClass="NSMutableArray" id="u6Q-eZ-TOP"/>
-                        <outletCollection property="tenMinutes" destination="MO1-tj-vHg" collectionClass="NSMutableArray" id="FzP-qh-uie"/>
-                        <outletCollection property="tenMinutes" destination="pWD-Mz-oU0" collectionClass="NSMutableArray" id="oiz-nd-0FG"/>
-                        <outletCollection property="tenMinutes" destination="FCD-d7-jwd" collectionClass="NSMutableArray" id="dny-4k-Thh"/>
-                        <outletCollection property="tenMinutes" destination="LUJ-19-OKx" collectionClass="NSMutableArray" id="r5W-Cw-TEp"/>
-                        <outletCollection property="tenMinutes" destination="PoU-ww-tNT" collectionClass="NSMutableArray" id="z0O-vO-6nO"/>
+                        <outletCollection property="tenMinutes" destination="MO1-tj-vHg" collectionClass="NSMutableArray" id="Nws-2i-OEY"/>
+                        <outletCollection property="tenMinutes" destination="pWD-Mz-oU0" collectionClass="NSMutableArray" id="yRx-ca-mdd"/>
+                        <outletCollection property="tenMinutes" destination="FCD-d7-jwd" collectionClass="NSMutableArray" id="dB3-fl-Ywc"/>
+                        <outletCollection property="tenMinutes" destination="LUJ-19-OKx" collectionClass="NSMutableArray" id="4ky-7C-5bz"/>
+                        <outletCollection property="tenMinutes" destination="PoU-ww-tNT" collectionClass="NSMutableArray" id="lMH-vN-TaB"/>
+                        <outletCollection property="defaultLights" destination="Xms-On-L1O" collectionClass="NSMutableArray" id="LU0-nd-OvS"/>
+                        <outletCollection property="defaultLights" destination="GgH-Tr-kcA" collectionClass="NSMutableArray" id="dWn-Sm-uDK"/>
+                        <outletCollection property="defaultLights" destination="C1S-cV-lL2" collectionClass="NSMutableArray" id="34e-MU-No4"/>
+                        <outletCollection property="defaultLights" destination="UKO-dI-O7i" collectionClass="NSMutableArray" id="UOj-SS-fP8"/>
+                        <outletCollection property="hours" destination="5he-je-LsS" collectionClass="NSMutableArray" id="9dL-Cs-afu"/>
+                        <outletCollection property="hours" destination="Ja3-QV-bju" collectionClass="NSMutableArray" id="UtJ-3E-smd"/>
+                        <outletCollection property="hours" destination="BFl-r3-Moc" collectionClass="NSMutableArray" id="IYC-u1-bzx"/>
+                        <outletCollection property="hours" destination="Uji-AD-9CB" collectionClass="NSMutableArray" id="3Jd-uz-XDu"/>
+                        <outletCollection property="hours" destination="F92-vc-UaM" collectionClass="NSMutableArray" id="70y-Ce-K8E"/>
+                        <outletCollection property="hours" destination="AVG-QO-1bD" collectionClass="NSMutableArray" id="dvH-Rs-hPZ"/>
+                        <outletCollection property="hours" destination="bmQ-0t-QY9" collectionClass="NSMutableArray" id="K31-DU-kdv"/>
+                        <outletCollection property="hours" destination="yGe-IS-Jwy" collectionClass="NSMutableArray" id="dAI-fN-Vvi"/>
+                        <outletCollection property="hours" destination="ZUK-PZ-cjP" collectionClass="NSMutableArray" id="NZ5-gX-evi"/>
+                        <outletCollection property="hours" destination="nCK-F3-XWV" collectionClass="NSMutableArray" id="IRg-2G-ylV"/>
+                        <outletCollection property="hours" destination="dtf-fS-Mkq" collectionClass="NSMutableArray" id="XzG-R8-hHW"/>
+                        <outletCollection property="hours" destination="j7b-gB-fhH" collectionClass="NSMutableArray" id="Jxu-rj-GkE"/>
+                        <outletCollection property="hours" destination="z8o-aw-B69" collectionClass="NSMutableArray" id="ohG-z0-m0L"/>
+                        <outletCollection property="hours" destination="vx4-fa-jud" collectionClass="NSMutableArray" id="iMr-6v-RVh"/>
+                        <outletCollection property="hours" destination="W8p-D3-j0Z" collectionClass="NSMutableArray" id="grG-DA-fSH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

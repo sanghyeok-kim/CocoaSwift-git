@@ -21,14 +21,15 @@ class ViewController: UIViewController {
     
     let seconds = ["정각", "일", "이", "삼", "사", "오", "육", "칠", "팔", "구"]
     let secondUnits = ["십", "이십", "삼십", "사십", "오십"]
-    
-    func setAllLabelGray() {
-        for label in labels {
-            label.textColor = .gray
-        }
-    }
+
+    @IBOutlet var defaultLights: [UILabel]!
     
     func displayClock() {
+        
+        for light in defaultLights {
+            light.textColor = .white
+        }
+        
         let now = Date()
         let calendar = Calendar.current
         
@@ -55,43 +56,49 @@ class ViewController: UIViewController {
         
         
         //시
-        let yeolHours = [10, 11, 12, 22, 23]
-        if yeolHours.contains(hour) {
+        let hourUnit = hour > 12 ? hour - 12 : hour
+        
+        if hourUnit >= 10 {
             hours[14].textColor = .white
         }
         
-        let hourUnit = hour > 12 ? hour - 12 : hour
-        switch hourUnit {
-        case 0:
+        if hourUnit == 0 {
             hours[0].textColor = .white
-        case 1:
+        }
+        else if hourUnit == 1 || hourUnit == 11{
             hours[1].textColor = .white
-        case 2:
+        }
+        else if hourUnit == 2 || hourUnit == 12{
             hours[2].textColor = .white
-        case 3:
+        }
+        else if hourUnit == 3 {
             hours[3].textColor = .white
-        case 4:
+        }
+        else if hourUnit == 4 {
             hours[4].textColor = .white
-        case 5:
+        }
+        else if hourUnit == 5 {
             hours[5].textColor = .white
-            hours[7].textColor = .white
-        case 6:
             hours[6].textColor = .white
+        }
+        else if hourUnit == 6 {
             hours[7].textColor = .white
-        case 7:
+            hours[6].textColor = .white
+        }
+        else if hourUnit == 7 {
             hours[8].textColor = .white
             hours[9].textColor = .white
-        case 8:
+        }
+        else if hourUnit == 8 {
             hours[10].textColor = .white
             hours[11].textColor = .white
-        case 9:
+        }
+        else if hourUnit == 9 {
             hours[12].textColor = .white
             hours[13].textColor = .white
-        default:
-            return
         }
         
- 
+        
         //분
         if minute >= 10 {
             tenMinutes[0].textColor = .white
@@ -165,6 +172,8 @@ class ViewController: UIViewController {
         
         secondText.append("\n")
         
+    
+        
         if second % 10 == 1 {
             secondText.append(seconds[1])
         }
@@ -199,7 +208,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
-            self.setAllLabelGray()
             self.displayClock()
         }
     }
