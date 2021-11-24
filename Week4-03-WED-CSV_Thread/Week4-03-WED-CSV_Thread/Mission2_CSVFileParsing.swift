@@ -7,14 +7,10 @@
 
 import Foundation
 
-
-
-import Foundation
-
 class ParsingCSV {
     
     var categories: [String] = []
-    var dictionaryFromCSV = [[String:Any]]()
+    var dictionaries = [[String:Any]]()
     
     init(path: String) {
         do{
@@ -40,7 +36,7 @@ class ParsingCSV {
                         lineDictionary.updateValue(eachLine[j], forKey: categories[j])
                     }
                 }
-                self.dictionaryFromCSV.append(lineDictionary)
+                self.dictionaries.append(lineDictionary)
             }
         }
         catch{
@@ -55,22 +51,22 @@ class ParsingCSV {
         for i in 0..<categories.count {
             newDict.updateValue(newValues[i], forKey: categories[i])
         }
-        self.dictionaryFromCSV.append(newDict)
+        self.dictionaries.append(newDict)
     }
     
     func findBy(name: String) -> Dictionary<String, Any> {
-        for i in 0..<self.dictionaryFromCSV.count {
-            if (self.dictionaryFromCSV[i]["name"] as! String == name) {
-                return self.dictionaryFromCSV[i]
+        for i in 0..<self.dictionaries.count {
+            if (self.dictionaries[i]["name"] as! String == name) {
+                return self.dictionaries[i]
             }
         }
         return [:]
     }
     
     func removeBy(email: String) -> Bool {
-        for i in 0..<self.dictionaryFromCSV.count {
-            if (self.dictionaryFromCSV[i]["email"] as! String == email) {
-                self.dictionaryFromCSV[i].removeAll()
+        for i in 0..<self.dictionaries.count {
+            if (self.dictionaries[i]["email"] as! String == email) {
+                self.dictionaries[i].removeAll()
                 return true
             }
         }
@@ -80,12 +76,12 @@ class ParsingCSV {
     func write(to file : String) -> Bool {
         var newText = self.categories.joined(separator: ", ")
         newText.append("\n")
-        for i in 0..<self.dictionaryFromCSV.count {
-            for j in 0..<self.dictionaryFromCSV.count {
+        for i in 0..<self.dictionaries.count {
+            for j in 0..<self.dictionaries.count {
                 if j < self.categories.count - 1{
-                    newText.append("\(self.dictionaryFromCSV[i][categories[j]]!), ")
+                    newText.append("\(self.dictionaries[i][categories[j]]!), ")
                 } else {
-                    newText.append("\(self.dictionaryFromCSV[i][categories[j]]!)\n")
+                    newText.append("\(self.dictionaries[i][categories[j]]!)\n")
                 }
             }
         }
@@ -111,7 +107,7 @@ class ParsingCSV {
     }
     
     func printDict() {
-        print(self.dictionaryFromCSV)
+        print(self.dictionaries)
     }
 }
 
