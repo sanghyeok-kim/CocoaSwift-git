@@ -9,8 +9,8 @@ import Foundation
 
 
 /*--------------------연습문제1--------------------*/
-let targetPath = "/System/Library/Desktop Pictures"
-let contents = FileSearch()
+//let targetPath = "/System/Library/Desktop Pictures"
+//let contents = FileSearch()
 
 //파일 찾기
 //print(contents.files(at: targetPath))
@@ -33,3 +33,17 @@ let contents = FileSearch()
 //print(contents.isExist(filename: "hello Blue.heic", "hello Red.heic", at: targetPath))
 
 
+
+/*--------------------연습문제2--------------------*/
+//let a = ParsingCSV(path: "/Users/sanghyeok/Desktop/ParsingTest.csv")
+//a.printDict()
+
+//a.add(name: "newName", email: "new@email.kr", language: "Obj-C", grade: 4)
+//a.printDict()
+
+//print(a.findBy(name: "JK"))
+
+//print(a.removeBy(email: "honux@codesquad.kr"))
+//a.printDict()
+
+//print(a.write(to: "newParsingTest.csv"))

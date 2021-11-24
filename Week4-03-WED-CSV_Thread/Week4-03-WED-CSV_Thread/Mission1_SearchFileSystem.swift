@@ -52,8 +52,7 @@ class FileSearch {
             return result
             */
             
-            
-            //위 코드를 filter를 사용해서 더 간단하게 줄일 수 있었다
+            //위 코드를 filter를 사용해서 더 간단하게 줄였다
             let resultByFilter = contents.filter { $0.hasSuffix(extensionType) }
             return resultByFilter
             
