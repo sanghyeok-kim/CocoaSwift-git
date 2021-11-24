@@ -46,8 +46,23 @@ some.doTimeConsumingOperation(operation: doSomething())
 /*--------------------File Manager--------------------*/
 
 
+//함수화 하지않은 코드
 var fileManager = FileManager.default
 print(try fileManager.contentsOfDirectory(atPath:"/System/Library/Desktop Pictures"))
 print(fileManager.currentDirectoryPath)
     
+//함수화한 코드
+func displayAllFiles(at path:String) {
+    let fileManager = FileManager()
+    
+    do {
+        let contents = try fileManager.contentsOfDirectory(atPath: path)
+        for (i, v) in contents.enumerated() {
+            print(i,v)
+        }
+    } catch let error as NSError {
+        print("Error access directory: \(error)")
+    }
+}
 
+displayAllFiles(at: "/System/Library/Desktop Pictures")
