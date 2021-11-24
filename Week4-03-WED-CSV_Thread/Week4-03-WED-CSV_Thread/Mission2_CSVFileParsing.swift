@@ -99,9 +99,9 @@ class ParsingCSV {
         }
         
         do {
-            let path = try fileManager.url(for: .desktopDirectory, in: .allDomainsMask, appropriateFor: nil, create: false)
-            let fileURL = path.appendingPathComponent(file)
-            try newText.write(to: fileURL, atomically: true, encoding: String.Encoding.utf8)
+            let newFilePath = try fileManager.url(for: .desktopDirectory, in: .allDomainsMask, appropriateFor: nil, create: false)
+            let url = newFilePath.appendingPathComponent(file)
+            try newText.write(to: url, atomically: true, encoding: String.Encoding.utf8)
             print("파일이 정상적으로 생성됨")
             return true
         }
