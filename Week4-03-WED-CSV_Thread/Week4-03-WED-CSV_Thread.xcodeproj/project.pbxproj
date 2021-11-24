@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E063A4A274E880200A18D68 /* Mission3_ThreadSearching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E063A49274E880200A18D68 /* Mission3_ThreadSearching.swift */; };
 		1EDBC0B8274DD052002C05D8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDBC0B7274DD052002C05D8 /* main.swift */; };
 		1EDBC0BF274DE722002C05D8 /* Mission1_SearchFileSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDBC0BE274DE722002C05D8 /* Mission1_SearchFileSystem.swift */; };
 		1EDBC0C1274DE8BB002C05D8 /* Mission2_CSVFileParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDBC0C0274DE8BB002C05D8 /* Mission2_CSVFileParsing.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1E063A49274E880200A18D68 /* Mission3_ThreadSearching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission3_ThreadSearching.swift; sourceTree = "<group>"; };
 		1EDBC0B4274DD052002C05D8 /* Week4-03-WED-CSV_Thread */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Week4-03-WED-CSV_Thread"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EDBC0B7274DD052002C05D8 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		1EDBC0BE274DE722002C05D8 /* Mission1_SearchFileSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission1_SearchFileSystem.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				1EDBC0B7274DD052002C05D8 /* main.swift */,
 				1EDBC0BE274DE722002C05D8 /* Mission1_SearchFileSystem.swift */,
 				1EDBC0C0274DE8BB002C05D8 /* Mission2_CSVFileParsing.swift */,
+				1E063A49274E880200A18D68 /* Mission3_ThreadSearching.swift */,
 			);
 			path = "Week4-03-WED-CSV_Thread";
 			sourceTree = "<group>";
@@ -127,6 +130,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EDBC0C1274DE8BB002C05D8 /* Mission2_CSVFileParsing.swift in Sources */,
+				1E063A4A274E880200A18D68 /* Mission3_ThreadSearching.swift in Sources */,
 				1EDBC0BF274DE722002C05D8 /* Mission1_SearchFileSystem.swift in Sources */,
 				1EDBC0B8274DD052002C05D8 /* main.swift in Sources */,
 			);
