@@ -9,8 +9,8 @@ import Foundation
 
 
 /*--------------------연습문제1--------------------*/
-//let targetPath = "/System/Library/Desktop Pictures"
-//let contents = FileSearch()
+let targetPath = "/System/Library/Desktop Pictures"
+let contents = FileSearch()
 
 //파일 찾기
 //print(contents.files(at: targetPath))
@@ -35,15 +35,23 @@ import Foundation
 
 
 /*--------------------연습문제2--------------------*/
-//let a = ParsingCSV(path: "/Users/sanghyeok/Desktop/ParsingTest.csv")
-//a.printDict()
+let myPasrse = ParsingCSV(path: "/Users/sanghyeok/Desktop/ParsingTest.csv")
+//myPasrse.printDict()
 
-//a.add(name: "newName", email: "new@email.kr", language: "Obj-C", grade: 4)
-//a.printDict()
+//myPasrse.add(name: "newName", email: "new@email.kr", language: "Obj-C", grade: 4)
+//myPasrse.printDict()
 
-//print(a.findBy(name: "JK"))
+//print(myPasrse.findBy(name: "JK"))
 
-//print(a.removeBy(email: "honux@codesquad.kr"))
-//a.printDict()
+//print(myPasrse.removeBy(email: "honux@codesquad.kr"))
+//myPasrse.printDict()
 
-//print(a.write(to: "newParsingTest.csv"))
+//print(myPasrse.write(to: "newParsingTest.csv"))
+
+
+
+/*--------------------연습문제3--------------------*/
+//let mySearch = ThreadSearching(path: "/Users/sanghyeok/Desktop/bookfile.txt")
+//
+//mySearch?.countAll()
+//RunLoop.current.run()
