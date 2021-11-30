@@ -37,7 +37,6 @@ class ViewController: UIViewController {
                 }
 //                self.view.endEditing(true) //버튼이 눌리면 키보드 사라짐
             }
-            
         })
         let cancelBtn = UIAlertAction(title: "취소", style: .cancel, handler: nil)
         
@@ -61,14 +60,13 @@ class ViewController: UIViewController {
         self.minTempLabel.text = "↓ \(Int(weatherInformation.main.minTemp - 273.15))℃"
         self.maxTempLabel.text = "↑ \(Int(weatherInformation.main.maxTemp - 273.15))℃"
         
-        displayWeatherImage(weather: weather)
-        
-        fadeInTextLabel(textLabel: cityNameLabel, delay: 0.5)
+        fadeInTextLabel(textLabel: cityNameLabel, delay: 0.25)
         fadeInTextLabel(textLabel: weatherDescription, delay: 0.75)
         fadeInTextLabel(textLabel: tempLabel, delay: 1.5)
         fadeInTextLabel(textLabel: minTempLabel, delay: 2.0)
         fadeInTextLabel(textLabel: maxTempLabel, delay: 2.0)
         
+        displayWeatherImage(weather: weather)
     }
     
     func displayWeatherImage(weather: Weather) {
@@ -102,15 +100,21 @@ class ViewController: UIViewController {
         }
     }
     
-    
     func codesquadEasterEgg() {
         self.cityNameLabel.text = "CodeSquad"
         self.weatherDescription.text = "코딩중"
         self.tempLabel.text = "999℃"
         self.minTempLabel.text = "↑ 1024℃"
         self.maxTempLabel.text = "↓ 0℃"
+        
+        fadeInTextLabel(textLabel: cityNameLabel, delay: 0.25)
+        fadeInTextLabel(textLabel: weatherDescription, delay: 0.75)
+        fadeInTextLabel(textLabel: tempLabel, delay: 1.5)
+        fadeInTextLabel(textLabel: minTempLabel, delay: 2.0)
+        fadeInTextLabel(textLabel: maxTempLabel, delay: 2.0)
 
-        self.weatherimageView.image = UIImage(named: "codesquad-fire.png")
+        guard let weatherImage = UIImage(named: "codesquad-fire.png") else { return }
+        fadeInImageView(image: weatherImage)
     }
     
     func getCurrentWeather(cityName: String) {
@@ -146,7 +150,6 @@ class ViewController: UIViewController {
         }, completion: nil)
     }
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

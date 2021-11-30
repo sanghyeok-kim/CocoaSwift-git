@@ -84,7 +84,7 @@
                                     <constraint firstAttribute="height" constant="30" id="HnT-cQ-xcc"/>
                                 </constraints>
                                 <color key="tintColor" systemColor="tintColor"/>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" systemColor="systemBackgroundColor"/>
                                 <items>
                                     <navigationItem title="현재 날씨" id="znA-iG-EU2">
                                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="OmG-HQ-hNG">
