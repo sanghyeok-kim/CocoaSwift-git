@@ -48,8 +48,6 @@ class ViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-
-    
     func configureView(weatherInformation: WeatherInformation) {
         self.cityNameLabel.text = weatherInformation.name
         
@@ -67,6 +65,23 @@ class ViewController: UIViewController {
         fadeInTextLabel(textLabel: maxTempLabel, delay: 2.0)
         
         displayWeatherImage(weather: weather)
+    }
+    
+    func getCurrentWeather(cityName: String) {
+        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(cityName)&appid=00e5cc35400b63777035b875f27668da") else { return }
+        
+        let session = URLSession(configuration: .default)
+        session.dataTask(with: url) { [weak self] data, response, error in
+            guard let data = data, error == nil else { return }
+            let decoder = JSONDecoder()
+            guard let weatherInformation = try? decoder.decode(WeatherInformation.self, from: data) else { return }
+//            debugPrint(weatherInformation)
+            
+            DispatchQueue.main.async {
+                self?.weatherStackView.isHidden = false
+                self?.configureView(weatherInformation: weatherInformation)
+            }
+        }.resume()
     }
     
     func displayWeatherImage(weather: Weather) {
@@ -100,6 +115,21 @@ class ViewController: UIViewController {
         }
     }
     
+    func fadeInTextLabel(textLabel: UILabel, delay: TimeInterval) {
+        textLabel.alpha = 0
+        UIView.animate(withDuration: 1.5, delay: delay, options: UIView.AnimationOptions.curveEaseIn, animations: {
+            textLabel.alpha = 1
+        })
+    }
+    
+    func fadeInImageView(image: UIImage) {
+        self.weatherimageView.image = image
+        self.weatherimageView.alpha = 0
+        UIView.animate(withDuration: 1.5, delay: 1.5, options: .curveEaseIn, animations: {
+            self.weatherimageView.alpha = 1
+        }, completion: nil)
+    }
+    
     func codesquadEasterEgg() {
         self.cityNameLabel.text = "CodeSquad"
         self.weatherDescription.text = "코딩중"
@@ -116,42 +146,10 @@ class ViewController: UIViewController {
         guard let weatherImage = UIImage(named: "codesquad-fire.png") else { return }
         fadeInImageView(image: weatherImage)
     }
-    
-    func getCurrentWeather(cityName: String) {
-        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(cityName)&appid=00e5cc35400b63777035b875f27668da") else { return }
-        
-        let session = URLSession(configuration: .default)
-        session.dataTask(with: url) { [weak self] data, response, error in
-            guard let data = data, error == nil else { return }
-            let decoder = JSONDecoder()
-            guard let weatherInformation = try? decoder.decode(WeatherInformation.self, from: data) else { return }
-//            debugPrint(weatherInformation)
-            
-            DispatchQueue.main.async {
-                self?.weatherStackView.isHidden = false
-                self?.configureView(weatherInformation: weatherInformation)
-            }
-        }.resume()
-    }
-    
-    
-    func fadeInTextLabel(textLabel: UILabel, delay: TimeInterval) {
-        textLabel.alpha = 0
-        UIView.animate(withDuration: 1.5, delay: delay, options: UIView.AnimationOptions.curveEaseIn, animations: {
-            textLabel.alpha = 1
-        })
-    }
-    
-    func fadeInImageView(image: UIImage) {
-        self.weatherimageView.image = image
-        self.weatherimageView.alpha = 0
-        UIView.animate(withDuration: 1.5, delay: 1.5, options: .curveEaseIn, animations: {
-            self.weatherimageView.alpha = 1
-        }, completion: nil)
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.getCurrentWeather(cityName: "seoul")
         // Do any additional setup after loading the view.
     }
 }
