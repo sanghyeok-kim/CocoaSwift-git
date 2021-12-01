@@ -24,6 +24,7 @@
 		1EA4BD592755E90200279C10 /* cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EA4BD582755E90200279C10 /* cloud.png */; };
 		1EA4BD5B2755E96E00279C10 /* thunderstorm.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EA4BD5A2755E96E00279C10 /* thunderstorm.png */; };
 		1EA4BD652755F32D00279C10 /* codesquad-fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EA4BD642755F32D00279C10 /* codesquad-fire.png */; };
+		1ECBA0A227575D1500A4D2CF /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECBA0A127575D1500A4D2CF /* DateExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		1EA4BD582755E90200279C10 /* cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud.png; sourceTree = "<group>"; };
 		1EA4BD5A2755E96E00279C10 /* thunderstorm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thunderstorm.png; sourceTree = "<group>"; };
 		1EA4BD642755F32D00279C10 /* codesquad-fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "codesquad-fire.png"; sourceTree = "<group>"; };
+		1ECBA0A127575D1500A4D2CF /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				1EA4BD322754FCD900279C10 /* SceneDelegate.swift */,
 				1EA4BD342754FCD900279C10 /* ViewController.swift */,
 				1EA4BD362754FCD900279C10 /* Main.storyboard */,
+				1ECBA0A127575D1500A4D2CF /* DateExtension.swift */,
 				1EA4BD442755035800279C10 /* WeatherInformation.swift */,
 				1EA4BD582755E90200279C10 /* cloud.png */,
 				1EA4BD4A2755C74500279C10 /* rain.png */,
@@ -182,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EA4BD352754FCD900279C10 /* ViewController.swift in Sources */,
+				1ECBA0A227575D1500A4D2CF /* DateExtension.swift in Sources */,
 				1EA4BD452755035900279C10 /* WeatherInformation.swift in Sources */,
 				1EA4BD312754FCD900279C10 /* AppDelegate.swift in Sources */,
 				1EA4BD332754FCD900279C10 /* SceneDelegate.swift in Sources */,

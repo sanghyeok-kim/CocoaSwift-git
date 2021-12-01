@@ -78,7 +78,7 @@ class ViewController: UIViewController {
 //            debugPrint(weatherInformation)
             
             DispatchQueue.main.async {
-                self?.weatherStackView.isHidden = false
+//                self?.weatherStackView.isHidden = false
                 self?.configureView(weatherInformation: weatherInformation)
             }
         }.resume()
@@ -134,8 +134,8 @@ class ViewController: UIViewController {
         self.cityNameLabel.text = "CodeSquad"
         self.weatherDescription.text = "코딩중"
         self.tempLabel.text = "999℃"
-        self.minTempLabel.text = "↑ 1024℃"
-        self.maxTempLabel.text = "↓ 0℃"
+        self.minTempLabel.text = "↓ 1024℃"
+        self.maxTempLabel.text = "↑ 0℃"
         
         fadeInTextLabel(textLabel: cityNameLabel, delay: 0.25)
         fadeInTextLabel(textLabel: weatherDescription, delay: 0.75)
