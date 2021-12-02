@@ -51,23 +51,12 @@ class ViewController: UIViewController {
             guard let data = data, error == nil else { return }
             let decoder = JSONDecoder()
             guard let weatherInformation = try? decoder.decode(WeatherInformation.self, from: data) else { return }
-//            debugPrint(weatherInformation)
             
             DispatchQueue.main.async {
                 self?.configureView(weatherInformation: weatherInformation)
-//                self?.operateTimer(weatherInformation: weatherInformation)
             }
         }.resume()
     }
-    
-//    public func operateTimer(weatherInformation: WeatherInformation) {
-//        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
-//            let localTime = Date().toStringUTC(weatherInformation.timezone)
-//            let localTimeLabelText = localTime
-//            self.localTimeLabel.text = localTimeLabelText
-//            self.fadeInTextLabel(textLabel: self.localTimeLabel, delay: 0.75, text: localTimeLabelText)
-//        }
-//    }
     
     
     func configureView(weatherInformation: WeatherInformation) {
@@ -91,10 +80,7 @@ class ViewController: UIViewController {
         
         let localTime = Date().toStringUTC(weatherInformation.timezone)
         let localTimeLabelText = localTime
-//        self.localTimeLabel.text = localTimeLabelText
         self.fadeInTextLabel(textLabel: self.localTimeLabel, delay: 0.75, text: localTimeLabelText)
-        
-        
     }
     
 
@@ -162,7 +148,7 @@ class ViewController: UIViewController {
         fadeInTextLabel(textLabel: tempLabel, delay: 1.5, text: tempLabelText)
         fadeInTextLabel(textLabel: minTempLabel, delay: 2.0, text: minTempLabelText)
         fadeInTextLabel(textLabel: maxTempLabel, delay: 2.0, text: maxTempLabelText)
-
+        self.localTimeLabel.text = ""
         guard let weatherImage = UIImage(named: "codesquad-fire.png") else { return }
         fadeInImageView(image: weatherImage)
     }
