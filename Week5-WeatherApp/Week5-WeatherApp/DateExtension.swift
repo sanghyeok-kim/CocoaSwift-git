@@ -10,7 +10,7 @@ import Foundation
 extension Date {
     func toStringUTC(_ timezone: Int ) -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "h:m a"
+        dateFormatter.dateFormat = "hh:mm a"
         dateFormatter.timeZone = TimeZone(secondsFromGMT: timezone)
         return dateFormatter.string(from: self)
     }

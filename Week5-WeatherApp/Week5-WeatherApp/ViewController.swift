@@ -8,22 +8,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet var entireOutlets: [UILabel]!
     @IBOutlet weak var navigationBar: UINavigationBar!
-    
     @IBOutlet weak var cityNameLabel: UILabel!
-    
     @IBOutlet weak var weatherDescription: UILabel!
-    
+    @IBOutlet weak var localTimeLabel: UILabel!
     @IBOutlet weak var tempLabel: UILabel!
-    
     @IBOutlet weak var maxTempLabel: UILabel!
-    
     @IBOutlet weak var minTempLabel: UILabel!
-    
     @IBOutlet weak var weatherimageView: UIImageView!
-    
-    @IBOutlet weak var weatherStackView: UIStackView!
     
     @IBAction func searchCityBtn(_ sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "도시 검색", message: nil, preferredStyle: .alert)
@@ -33,11 +27,11 @@ class ViewController: UIViewController {
                 if inputCityName == "codesquad" {
                     self.codesquadEasterEgg()
                 } else {
-                self.getCurrentWeather(cityName: inputCityName)
+                    self.getCurrentWeather(cityName: inputCityName)
                 }
-//                self.view.endEditing(true) //버튼이 눌리면 키보드 사라짐
             }
         })
+        
         let cancelBtn = UIAlertAction(title: "취소", style: .cancel, handler: nil)
         
         alert.addAction(searchBtn)
@@ -45,26 +39,8 @@ class ViewController: UIViewController {
         alert.addTextField(configurationHandler: { cityTextField in
             cityTextField.placeholder = "도시 이름 입력"
         })
+        
         self.present(alert, animated: true, completion: nil)
-    }
-    
-    func configureView(weatherInformation: WeatherInformation) {
-        self.cityNameLabel.text = weatherInformation.name
-        
-        guard let weather = weatherInformation.weather.first else { return }
-        self.weatherDescription.text = weather.description
-        
-        self.tempLabel.text = "\(Int(weatherInformation.main.temp - 273.15))℃"
-        self.minTempLabel.text = "↓ \(Int(weatherInformation.main.minTemp - 273.15))℃"
-        self.maxTempLabel.text = "↑ \(Int(weatherInformation.main.maxTemp - 273.15))℃"
-        
-        fadeInTextLabel(textLabel: cityNameLabel, delay: 0.25)
-        fadeInTextLabel(textLabel: weatherDescription, delay: 0.75)
-        fadeInTextLabel(textLabel: tempLabel, delay: 1.5)
-        fadeInTextLabel(textLabel: minTempLabel, delay: 2.0)
-        fadeInTextLabel(textLabel: maxTempLabel, delay: 2.0)
-        
-        displayWeatherImage(weather: weather)
     }
     
     func getCurrentWeather(cityName: String) {
@@ -78,12 +54,50 @@ class ViewController: UIViewController {
 //            debugPrint(weatherInformation)
             
             DispatchQueue.main.async {
-//                self?.weatherStackView.isHidden = false
                 self?.configureView(weatherInformation: weatherInformation)
+//                self?.operateTimer(weatherInformation: weatherInformation)
             }
         }.resume()
     }
     
+//    public func operateTimer(weatherInformation: WeatherInformation) {
+//        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+//            let localTime = Date().toStringUTC(weatherInformation.timezone)
+//            let localTimeLabelText = localTime
+//            self.localTimeLabel.text = localTimeLabelText
+//            self.fadeInTextLabel(textLabel: self.localTimeLabel, delay: 0.75, text: localTimeLabelText)
+//        }
+//    }
+    
+    
+    func configureView(weatherInformation: WeatherInformation) {
+        
+        guard let weather = weatherInformation.weather.first else { return }
+        let weatherDescriptionText = weather.description
+
+        let cityNameLabelText = weatherInformation.name
+        let tempLabelText = "\(Int(weatherInformation.main.temp - 273.15))℃"
+        let minTempLabelText = "↓ \(Int(weatherInformation.main.minTemp - 273.15))℃"
+        let maxTempLabelText = "↑ \(Int(weatherInformation.main.maxTemp - 273.15))℃"
+        
+        fadeInTextLabel(textLabel: cityNameLabel, delay: 0.25, text: cityNameLabelText)
+        fadeInTextLabel(textLabel: weatherDescription, delay: 0.75, text: weatherDescriptionText)
+        fadeInTextLabel(textLabel: tempLabel, delay: 1.5, text: tempLabelText)
+        fadeInTextLabel(textLabel: minTempLabel, delay: 2.0, text: minTempLabelText)
+        fadeInTextLabel(textLabel: maxTempLabel, delay: 2.0, text: maxTempLabelText)
+    
+        displayWeatherImage(weather: weather)
+        
+        
+        let localTime = Date().toStringUTC(weatherInformation.timezone)
+        let localTimeLabelText = localTime
+//        self.localTimeLabel.text = localTimeLabelText
+        self.fadeInTextLabel(textLabel: self.localTimeLabel, delay: 0.75, text: localTimeLabelText)
+        
+        
+    }
+    
+
     func displayWeatherImage(weather: Weather) {
         switch weather.id {
         case 200..<300:
@@ -115,11 +129,17 @@ class ViewController: UIViewController {
         }
     }
     
-    func fadeInTextLabel(textLabel: UILabel, delay: TimeInterval) {
+    func fadeInTextLabel(textLabel: UILabel, delay: TimeInterval, text: String) {
+        
         textLabel.alpha = 0
+        textLabel.text = text
         UIView.animate(withDuration: 1.5, delay: delay, options: UIView.AnimationOptions.curveEaseIn, animations: {
             textLabel.alpha = 1
         })
+        
+        for outlet in entireOutlets {
+            outlet.isHidden = false
+        }
     }
     
     func fadeInImageView(image: UIImage) {
@@ -131,17 +151,17 @@ class ViewController: UIViewController {
     }
     
     func codesquadEasterEgg() {
-        self.cityNameLabel.text = "CodeSquad"
-        self.weatherDescription.text = "코딩중"
-        self.tempLabel.text = "999℃"
-        self.minTempLabel.text = "↓ 1024℃"
-        self.maxTempLabel.text = "↑ 0℃"
+        let cityNameLabelText = "CodeSquad"
+        let weatherDescriptionText = "코딩중"
+        let tempLabelText = "999℃"
+        let minTempLabelText = "↓ 1024℃"
+        let maxTempLabelText = "↑ 0℃"
         
-        fadeInTextLabel(textLabel: cityNameLabel, delay: 0.25)
-        fadeInTextLabel(textLabel: weatherDescription, delay: 0.75)
-        fadeInTextLabel(textLabel: tempLabel, delay: 1.5)
-        fadeInTextLabel(textLabel: minTempLabel, delay: 2.0)
-        fadeInTextLabel(textLabel: maxTempLabel, delay: 2.0)
+        fadeInTextLabel(textLabel: cityNameLabel, delay: 0.25, text: cityNameLabelText)
+        fadeInTextLabel(textLabel: weatherDescription, delay: 0.75, text: weatherDescriptionText)
+        fadeInTextLabel(textLabel: tempLabel, delay: 1.5, text: tempLabelText)
+        fadeInTextLabel(textLabel: minTempLabel, delay: 2.0, text: minTempLabelText)
+        fadeInTextLabel(textLabel: maxTempLabel, delay: 2.0, text: maxTempLabelText)
 
         guard let weatherImage = UIImage(named: "codesquad-fire.png") else { return }
         fadeInImageView(image: weatherImage)
@@ -149,8 +169,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        for outlet in entireOutlets {
+            outlet.isHidden = true
+        }
         self.getCurrentWeather(cityName: "seoul")
-        // Do any additional setup after loading the view.
     }
 }
 
